@@ -98,28 +98,17 @@
     });
 
 
-    // Vendor carousel
     $('.vendor-carousel').owlCarousel({
-        loop: false,          // IMPORTANT: prevents duplication issue
-        margin: 45,
+        loop: true,
+        margin: 30,
         dots: true,
+        nav: false,
         autoplay: true,
-        center: true,
-        smartSpeed: 1000,
-        responsive: {
-            0: {
-                items: 2
-            },
-            576: {
-                items: 4
-            },
-            768: {
-                items: 6
-            },
-            992: {
-                items: 8
-            }
-        }
+        autoplayTimeout: 2500,   // smooth autoplay
+        smartSpeed: 800,
+        autoplayHoverPause: false, // continue autoplay on hover
+
+        items: 1                // 🔥 CRITICAL (each slide = full 2 rows)
     });
     
 

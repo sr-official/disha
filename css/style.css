@@ -7,6 +7,10 @@
     --dark: #091E3E;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background: #fffcfcf1;
 }
@@ -526,6 +530,18 @@ h6,
     background-size: cover;
 }
 
+.about-header {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/hero-images/about-us.jpg) center bottom no-repeat;
+    background-size: cover;
+}
+
+.leader-header {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/hero-images/about-leader.jpg) center bottom no-repeat;
+    background-size: cover;
+}
+
+
+
 .link-animated a {
     transition: .5s;
 }
@@ -626,31 +642,71 @@ h6,
     background: #5b21b6; /* purple */
 }
 
-/* partner */
 
+/* =========================
+   CAROUSEL SLIDE WRAPPER
+========================= */
 .vendor-carousel .item {
-    width: 160px;              /* fixed logo box width */
-    height: 100px;             /* fixed logo box height */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+/* =========================
+   ROW LAYOUTS
+========================= */
+.top-row,
+.bottom-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    gap: 35px;
+    flex-wrap: wrap;
 }
 
-.vendor-carousel .item img {
+/* =========================
+   PARTNER BOX
+========================= */
+.partner-box {
+    text-align: center;
+}
+
+/* =========================
+   IMPORTANT PARTNERS
+========================= */
+.partner-box.important img {
+    max-height: 150px;
     max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;       /* keeps logo ratio, no distortion */
+    object-fit: contain;
 }
 
-.vendor-carousel .item img {
-    filter: grayscale(0%);
+/* =========================
+   NORMAL PARTNERS
+========================= */
+.partner-box img {
+    max-height: 150px;
+    max-width: 100%;
+    object-fit: contain;
     transition: 0.3s ease;
 }
 
-.vendor-carousel .item img:hover {
+/* =========================
+   HOVER EFFECT
+========================= */
+.partner-box img:hover {
     filter: grayscale(100%);
     transform: scale(1.05);
+}
+
+/* =========================
+   TEXT
+========================= */
+.partner-type {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
 }
 
 /*** Team ***/
