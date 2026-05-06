@@ -108,7 +108,7 @@
         smartSpeed: 800,
         autoplayHoverPause: false, // continue autoplay on hover
 
-        items: 1                // 🔥 CRITICAL (each slide = full 2 rows)
+        items: 1                // CRITICAL (each slide = full 2 rows)
     });
     
 
